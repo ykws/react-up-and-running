@@ -1,5 +1,9 @@
 # React: Up & Running
 
+[![macOS](https://img.shields.io/badge/macOS-Catalina-black)](https://developer.apple.com/macos/)
+[![React](https://img.shields.io/badge/react-16.12.0-blue)](https://reactjs.org/)
+
+
 * [Reactビギナーズガイド](https://www.oreilly.co.jp/books/9784873117881/)
 * [Author's repository](https://github.com/stoyan/reactbook)
 
