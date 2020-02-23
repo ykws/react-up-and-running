@@ -11,8 +11,12 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       ReactDOM.render(
-        React.createElement('h1', {id: "my-heading"},
-          React.createElement('span', null, 'Hello'), ' world!'),
+        React.createElement('h1',
+          {id: "my-heading"},
+          React.createElement('span', null,
+            React.createElement('em', null, 'Hell'),
+            'o'),
+          ' world!'),
         document.getElementById("app")
       );
     </script>
