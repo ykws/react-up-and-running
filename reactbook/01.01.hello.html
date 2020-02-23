@@ -12,7 +12,11 @@
     <script>
       ReactDOM.render(
         React.createElement('h1',
-          {id: "my-heading"},
+          {
+            id: "my-heading",
+            className: "pretty",
+            htmlFor: "me"
+          },
           React.createElement('span', null,
             React.createElement('em', null, 'Hell'),
             'o'),
