@@ -1,4 +1,4 @@
-# Book's differents
+# Book's differences
 
 ## 1.2
 
