@@ -4,11 +4,13 @@
 * [Author's repository](https://github.com/stoyan/reactbook)
 
 ## Set up
-### Get React Library
-1. Download the [Latest releases](https://github.com/facebook/react/releases)'s Source code as zip.
-2. Copy the workspace, for example the following commands.
 
-```
-$ mkdir ~/reactbook
-$ mv ~/Downloads/react-16.12.0/ ~/reactbook/react
+### Use CDN
+Not found download page, can use CDN quickly.
+
+* [Add React to a Website](https://reactjs.org/docs/add-react-to-a-website.html)
+
+```html
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 ```
