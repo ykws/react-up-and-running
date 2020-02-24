@@ -6,6 +6,7 @@
 
 * [Reactビギナーズガイド](https://www.oreilly.co.jp/books/9784873117881/)
 * [Author's repository](https://github.com/stoyan/reactbook)
+* Book's differences :memo: [React v15.5.0](https://reactjs.org/blog/2017/04/07/react-v15.5.0.html)
 
 ## Set up
 
