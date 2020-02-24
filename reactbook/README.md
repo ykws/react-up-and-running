@@ -14,6 +14,29 @@
 + React.createElement('h1', null, 'Hello, world!'),
 ```
 
+
+```diff
+- React.DOM.h1(
++ React.createElement('h1',
+    {id: "my-heading"},
+-   React.DOM.span(null, "Hell"),
++   React.createElement('span', null, "Hell"),
+    " world!"
+```
+
+```diff
+- React.DOM.h1(
++ React.createElement('h1',
+    {id: "my-heading"},
+-   React.DOM.span(null,
++   React.createElement('span', null
+-     React.DOM.em(null, "Hell"),
++     React.createElement('em', null, "Hell"),
+      "o"
+    ),
+    " world!"
+```
+
 ## References
 * [CDN Links](https://reactjs.org/docs/cdn-links.html)
 * [React Without JSX](https://reactjs.org/docs/react-without-jsx.html)
