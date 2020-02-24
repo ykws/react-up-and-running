@@ -10,7 +10,7 @@
 ```
 
 ```diff
-- React.DOM.h1(hull, "Hello, world!"),
+- React.DOM.h1(null, "Hello, world!"),
 + React.createElement('h1', null, 'Hello, world!'),
 ```
 
@@ -37,8 +37,24 @@
     " world!"
 ```
 
+## 2.1
+
+```diff
+- var MyComponent = React.createClass({
++ class MyComponent extends React.Component {
+```
+
+```diff
+- var Component = React.createClass({
+-   render: function() {
+-     return React.DOM.span(null, "カスタムコンポーネント");
++ class Component extends React.Component {
++   render() { 
++     return React.createElement('span', null, "カスタムコンポーネント");
+```
+
 ## References
 * [CDN Links](https://reactjs.org/docs/cdn-links.html)
 * [React Without JSX](https://reactjs.org/docs/react-without-jsx.html)
 * [React Top-Level API - React createElement()](https://reactjs.org/docs/react-api.html#createelement)
-
+* [Components and Props](https://reactjs.org/docs/components-and-props.html)
