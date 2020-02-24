@@ -53,8 +53,30 @@
 +     return React.createElement('span', null, "カスタムコンポーネント");
 ```
 
+## 2.3
+
+```diff
+- var Component = React.createClass({
+-   propTypes: {
+-     name: React.PropTypes.string.isRequired,
+-   },
+-   render: function() {
+-     return React.DOM.span(null, "カスタムコンポーネント");
++ class Component extends React.Component {
++   render() { 
++     return React.createElement('span', null, "カスタムコンポーネント");
+    }
+  }
++ Component.propTypes = {
++   name: PropTypes.string.isRequired,
++ };
+```
+
+
 ## References
 * [CDN Links](https://reactjs.org/docs/cdn-links.html)
 * [React Without JSX](https://reactjs.org/docs/react-without-jsx.html)
 * [React Top-Level API - React createElement()](https://reactjs.org/docs/react-api.html#createelement)
 * [Components and Props](https://reactjs.org/docs/components-and-props.html)
+* [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+* [prop-types](https://github.com/facebook/prop-types)
