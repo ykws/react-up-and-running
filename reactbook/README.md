@@ -72,6 +72,10 @@
 + };
 ```
 
+```diff
+- Object.keys(React.PropTypes)
++ Object.keys(PropTypes)
+```
 
 ## References
 * [CDN Links](https://reactjs.org/docs/cdn-links.html)
