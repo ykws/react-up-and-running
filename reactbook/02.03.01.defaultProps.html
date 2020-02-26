@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>propTypes</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <script>
+      class Component extends React.Component {
+        render() {
+          return React.createElement('span', null, 'I am ' + this.props.firstName + ' ' + this.props.middleName + ' ' + this.props.familyName);
+        }
+      }
+
+      Component.propTypes = {
+        firstName: PropTypes.string.isRequired,
+        middleName: PropTypes.string,
+        familyName: PropTypes.string.isRequired,
+        address: PropTypes.string
+      };
+
+      Component.defaultProps = {
+        middleName: '',
+        address: 'Nothing'
+      };
+
+      ReactDOM.render(
+        React.createElement(Component, {
+          firstName: 'Yoshiyuki',
+          familyName: 'KAWASHIMA'
+        }),
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
