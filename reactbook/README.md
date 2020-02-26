@@ -77,6 +77,45 @@
 + Object.keys(PropTypes)
 ```
 
+## 2.3.1
+
+```diff
+- var Component = React.createClass({
+-   propTypes: {
+-     firstName: React.PropTypes.string.isRequired,
+-     middleName: React.PropTypes.string,
+-     familyName: React.PropTypes.string.isRequired,
+-     address: React.PropTypes.string,
+-   },
+-
+-   getDefaultProps: function() {
+-     return {
+-       middleName: '',
+-       address: 'なし',
+-     };
+-   },
+-
+-   render: function() {/* ... */}
+- });
++ class Component extends React.Component {
++   render() { 
++     return /* ... */
++   }
++ }
++
++ Component.propTypes = {
++   firstName: PropTypes.string.isRequired,
++   middleName: PropTypes.string,
++   familyName: PropTypes.string.isRequired,
++   address: PropTypes.string,
++ };
++
++ Component.defaultProps = {
++   middleName: '',
++   address: 'なし',
++ };
+```
+
 ## References
 * [CDN Links](https://reactjs.org/docs/cdn-links.html)
 * [React Without JSX](https://reactjs.org/docs/react-without-jsx.html)
