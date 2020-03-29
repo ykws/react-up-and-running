@@ -28,8 +28,11 @@
           this._log('componentWillUpdate', arguments);
         }
 
-        componentDidUpdate() {
+        componentDidUpdate(oldProps, oldState) {
           this._log('componentDidUpdate', arguments);
+          if (this.state.text.length > 3) {
+            this.setState(oldState);
+          }
         }
 
         componentWillMount() {
