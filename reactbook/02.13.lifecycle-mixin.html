@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lifecycle</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <script>
+      class TextAreaCounter extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            text: this.props.text
+          };
+          this.handleChange = this.handleChange.bind(this);
+        }
+
+        handleChange(event) {
+          this.setState({text: event.target.value})
+        }
+
+        render() {
+          return React.createElement('div', null,
+            React.createElement('textarea', {
+              value: this.state.text,
+              onChange: this.handleChange
+            }),
+            React.createElement('h3', null, this.state.text.length)
+          );
+        }
+      }
+
+      TextAreaCounter.propTypes = {
+        text: PropTypes.string
+      };
+
+      TextAreaCounter.defaultProps = {
+        text: ''
+      };
+
+      ReactDOM.render(
+        React.createElement(TextAreaCounter, {
+          text: 'Bob',
+          name: 'TextAreaCounter',
+          mixins: [logMixin],
+        }),
+        document.getElementById("app")
+      );
+
+      var logMixin = {
+        _log: function(methodName, args) {
+          console.log(methodName, args);
+        },
+        componentWillUpdate: function() {
+          this._log('componentWillUpdate', arguments);
+        },
+        componentDidUpdate: function() {
+          this._log('componentDidUpdate', arguments);
+        },
+        componentWillMount: function() {
+          this._log('componentWillMount', arguments);
+        },
+        componentDidMount: function() {
+          this._log('componentDidMount', arguments);
+        },
+        componentWillUnmount: function() {
+          this._log('componentWillUnmount', arguments);
+        },
+      };
+      /*
+      var TextAreaCounter = React.createClass({
+        name: 'TextAreaCounter',
+        mixins: [logMixin],
+      });
+       */
+    </script>
+  </body>
+</html>
