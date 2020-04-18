@@ -124,3 +124,4 @@
 * [Forms](https://reactjs.org/docs/forms.html)
 * [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 * [prop-types](https://github.com/facebook/prop-types)
+* [Hooks](https://reactjs.org/docs/hooks-intro.html)
